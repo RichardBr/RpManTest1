@@ -8,8 +8,6 @@ namespace RpMan.Domain.Entities
     {
         public int LandlordId { get; set; }
         public int TenancyAgreementId { get; set; }
-        public string Middlenames { get; set; }
-        public string Lastname { get; set; }
-        public DateTime DateOfBirth { get; set; }
+        public string Dummy { get; set; }
     }
 }
