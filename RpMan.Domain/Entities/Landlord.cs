@@ -4,7 +4,7 @@ using System.Text;
 
 namespace RpMan.Domain.Entities
 {
-    class Landlord
+    public class Landlord
     {
         public int Id { get; set; }
         public string Firstname { get; set; }

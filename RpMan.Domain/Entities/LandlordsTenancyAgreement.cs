@@ -4,7 +4,7 @@ using System.Text;
 
 namespace RpMan.Domain.Entities
 {
-    class LandlordsTenancyAgreement
+    public class LandlordsTenancyAgreement
     {
         public int LandlordId { get; set; }
         public int TenancyAgreementId { get; set; }

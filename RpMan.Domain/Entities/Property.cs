@@ -4,7 +4,7 @@ using System.Text;
 
 namespace RpMan.Domain.Entities
 {
-    class Property
+    public class Property
     {
         public int Id { get; set; }
         public string AddressLine1 { get; set; }

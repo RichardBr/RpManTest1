@@ -4,7 +4,7 @@ using System.Text;
 
 namespace RpMan.Domain.Entities
 {
-    class TenancyAgreement
+    public class TenancyAgreement
     {
         public TenancyAgreement()
         {
