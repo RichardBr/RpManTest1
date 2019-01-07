@@ -20,6 +20,7 @@ namespace RpMan.Domain.Entities
 
         // Lookups
         public Property Property { get; set; }
+        public int PropertyId { get; set; }
 
         // Children
         public ICollection<TenantsTenancyAgreement> TenantsTenancyAgreements { get; private set; }

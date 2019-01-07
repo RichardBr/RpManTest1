@@ -93,7 +93,8 @@ namespace RpMan.Persistence
             ta.Add(new TenancyAgreement
                 {
                     Id = 1,
-                    Property = _properties[1]
+                    // Property = _properties[1]
+                    PropertyId = 1
                 }
                 .AddTenantsTenancyAgreements(
                     new TenantsTenancyAgreement {TenantId = 1}
@@ -103,8 +104,9 @@ namespace RpMan.Persistence
             ta.Add(new TenancyAgreement
                 {
                     Id = 2,
-                    Property = _properties[2]
-                }
+                // Property = _properties[2]
+                    PropertyId = 2
+            }
                 .AddTenantsTenancyAgreements(
                     new TenantsTenancyAgreement {TenantId = 2},
                     new TenantsTenancyAgreement {TenantId = 3}
@@ -114,8 +116,9 @@ namespace RpMan.Persistence
             ta.Add(new TenancyAgreement
                 {
                     Id = 3,
-                    Property = _properties[3]
-                }
+                // Property = _properties[3]
+                    PropertyId = 3
+            }
                 .AddTenantsTenancyAgreements(
                     new TenantsTenancyAgreement { TenantId = 4 },
                     new TenantsTenancyAgreement { TenantId = 5 },
