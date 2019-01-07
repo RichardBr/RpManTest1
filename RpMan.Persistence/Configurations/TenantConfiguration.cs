@@ -7,9 +7,9 @@ using RpMan.Domain.Entities;
 
 namespace RpMan.Persistence.Configurations
 {
-    public class LandlordConfiguration : IEntityTypeConfiguration<Landlord>
+    public class TenantConfiguration : IEntityTypeConfiguration<Tenant>
     {
-        public void Configure(EntityTypeBuilder<Landlord> builder)
+        public void Configure(EntityTypeBuilder<Tenant> builder)
         {
             builder.Property(e => e.Id).HasMaxLength(8);
             builder.Property(e => e.Firstname).HasMaxLength(60);
