@@ -5,8 +5,19 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="8.0.0" />
+    <PackageReference Include="MediatR" Version="6.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\RpMan.Domain\RpMan.Domain.csproj" />
     <ProjectReference Include="..\RpMan.Persistence\RpMan.Persistence.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Tenants\Models\" />
+    <Folder Include="Tenants\Commands\" />
+    <Folder Include="Tenants\Queries\GetTenantDetail\" />
   </ItemGroup>
 
 </Project>

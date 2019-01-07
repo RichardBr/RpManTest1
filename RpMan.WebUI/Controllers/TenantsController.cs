@@ -1,10 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading;
 using System.Threading.Tasks;
+using MediatR;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using RpMan.Application.Tenants.Queries.GetTenantList;
 using RpMan.Persistence;
 
 namespace RpMan.WebUI.Controllers
@@ -14,10 +17,12 @@ namespace RpMan.WebUI.Controllers
     public class TenantsController : ControllerBase
     {
         private readonly RpManDbContext _context;
+        private readonly IMediator _mediator;
 
-        public TenantsController(RpManDbContext context)
+        public TenantsController(RpManDbContext context, IMediator mediator)
         {
             _context = context;
+            _mediator = mediator;
         }
 
         [HttpGet]
@@ -40,5 +45,21 @@ namespace RpMan.WebUI.Controllers
 
             return BadRequest();
         }
+
+        //[HttpGet("GetAll")]
+        //public async Task<IActionResult> GetAll(CancellationToken cancellationtoken)
+        //{
+        //    var result = await _mediator.Send(new GetAllTenantsQuery(), cancellationtoken);
+        //    return Ok(result);
+        //}
+
+        [HttpGet("GetAll")]
+        public async Task<ActionResult<TenantListViewModel>> GetAll()
+        {
+            var result = await _mediator.Send(new GetAllTenantsQuery());
+
+            return Ok(result);
+        }
+
     }
 }
