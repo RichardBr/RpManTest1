@@ -6,6 +6,7 @@
 
   <ItemGroup>
     <PackageReference Include="AutoMapper" Version="8.0.0" />
+    <PackageReference Include="FluentValidation" Version="8.1.2" />
     <PackageReference Include="MediatR" Version="6.0.0" />
   </ItemGroup>
 
@@ -15,8 +16,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Folder Include="Customer\Commands\" />
+    <Folder Include="Customer\Queries\" />
     <Folder Include="Tenants\Models\" />
-    <Folder Include="Tenants\Commands\" />
     <Folder Include="Tenants\Queries\GetTenantDetail\" />
   </ItemGroup>
 
